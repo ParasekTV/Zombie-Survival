@@ -1,0 +1,228 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --primary-color: #8b0000;
+    /* Blutrot */
+    --secondary-color: #2f4f2f;
+    /* Zombie Grün */
+    --accent-color: #ff4500;
+    --panel-bg: #2d2d2d;
+    --border-color: #444;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    /* Retro/Terminal Look */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.content-box {
+    background: var(--panel-bg);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+/* Layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--panel-bg);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+footer {
+    background-color: var(--panel-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+footer a {
+    color: #aaa;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+/* Forms */
+.form-container {
+    background-color: var(--panel-bg);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: #111;
+    border: 1px solid var(--border-color);
+    color: white;
+    box-sizing: border-box;
+    /* Wichtig für padding */
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #a00000;
+}
+
+button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert-error {
+    background-color: #500;
+    color: #ffcccc;
+    border: 1px solid #a00;
+}
+
+.alert-success {
+    background-color: #050;
+    color: #ccffcc;
+    border: 1px solid #0a0;
+}
+
+/* Dashboard & Stats */
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-box {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.stat-box h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Pinnwand */
+.post {
+    background-color: var(--panel-bg);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-content {
+    white-space: pre-wrap;
+    margin-bottom: 1rem;
+}
+
+.comments {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #444;
+    background: #252525;
+    padding: 0.5rem;
+}
+
+.comment {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
